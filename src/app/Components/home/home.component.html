@@ -1,0 +1,21 @@
+<mat-toolbar class="nav">
+  <mat-toolbar-row class="container">
+    <div class="col-md">
+      <span>{{curruser.user}}</span>
+    </div>
+    <div class="col-md ">
+    <span><a [routerLink] = "['create/',curruser.id]" routerLinkActive="active" >Create New Post</a></span>
+    </div>
+    <div  class="col-md">
+    <span><a routerLink = "viewpost" routerLinkActive="active" >View Posts</a></span>
+  </div>
+    <div class="col-md ">
+    <span><a [routerLink] = "['profile/',curruser.id]" routerLinkActive="active">Profile</a></span>
+  </div>
+  <div class="col-md">
+    <button routerLink ="/login"  (click)="logout()" class="btn btn-danger mx-2">Logout</button>
+  </div>
+  </mat-toolbar-row>
+
+  </mat-toolbar>
+  <router-outlet></router-outlet>

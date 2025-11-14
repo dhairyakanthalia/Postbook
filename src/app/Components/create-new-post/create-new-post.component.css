@@ -1,0 +1,37 @@
+.mat-card{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 5px 10px 18px #888888;
+}
+#photo-upload {
+    display: none;
+}
+
+textarea {
+    font-size: 1.5em;
+    padding: 1em;
+    resize: none;
+    width: 250px;
+    min-height: 200px;
+    border: none;
+    outline: none;
+}
+
+#post-preview {
+    text-align: right;
+    margin-top: 1em;
+}
+
+#post-preview-image {
+    object-position: center;
+    width: 200px;
+    height: 100px;
+    border-radius: 1em;
+    border: 1px dashed gray;
+}
+.message{
+    color: red;
+}

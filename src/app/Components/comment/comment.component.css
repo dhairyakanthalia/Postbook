@@ -1,0 +1,22 @@
+.comment-box {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    min-width: 400px;
+    max-width: 600px;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+.comment{
+    display: flex;
+}
+textarea {
+    height: 50px;
+    padding: 1em 2em 1em 1em;
+    border: 1px solid gray;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    direction: ltr;
+    white-space: pre-wrap
+}

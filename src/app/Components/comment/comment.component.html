@@ -1,0 +1,12 @@
+<h2>Comments</h2>
+<div class="comment-box">
+  <div *ngFor="let comment of comments" >
+    <p><strong>{{comment.user[0]}}</strong> {{comment.user[1]}}</p>
+  </div>
+</div>
+<div class="comment">
+  <textarea placeholder="Comment..." #commentInput> </textarea>
+  <button mat-flat-button color="warn" (click)="sendcomment(commentInput)">
+    <mat-icon>send</mat-icon>
+</button>
+</div>

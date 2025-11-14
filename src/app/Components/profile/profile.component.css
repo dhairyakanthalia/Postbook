@@ -1,0 +1,43 @@
+.mat-card{
+    max-width: auto;
+    max-height: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: 2em;
+    box-shadow: 5px 10px 18px #888888;
+}
+.post{
+    max-width: 500px;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mat-card-image{
+    display: inline;
+    max-width: 250px;
+    height: auto;
+}
+.dislike{
+    color: grey;
+}
+.like{
+    color: blue;
+}
+.comment{
+    color: chocolate;
+}
+button{
+    border: none;
+    background-color: white;
+}
+span{
+    font-size: large;
+    margin: 2px;
+}
+.del{
+    float: right;
+    margin-top: 0;
+}
+.delete{
+    color:rgb(245, 56, 56)
+}

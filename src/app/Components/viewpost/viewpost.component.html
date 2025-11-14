@@ -1,0 +1,19 @@
+<div class="post">
+<mat-card *ngFor="let post of posts">
+    <div *ngIf = "post.userid === user.id" class="del">
+        <button (click)="delete(post.id)"><mat-icon class="delete">delete</mat-icon></button>
+    </div>
+    <mat-card-header>
+        <mat-card-title>{{post.username}}</mat-card-title>
+    </mat-card-header>
+    <img *ngIf = "post.img" mat-card-image src="{{post.img}}" alt = "image not found">
+    <mat-card-content>
+        <span>{{post.text}}</span>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="onlikeclick(post.id)"><mat-icon class="like">thumb_up_alt</mat-icon><span>{{post.likes}}</span></button>
+        <button><mat-icon class="dislike" (click)="ondislikeclick(post.id)">thumb_down_alt</mat-icon><span>{{post.dislikes}}</span></button>
+        <button><mat-icon  (click)="oncommentclick(post.id)" class="comment">chat_bubble_outline</mat-icon></button>
+    </mat-card-actions>
+</mat-card>
+</div>  

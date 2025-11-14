@@ -1,0 +1,52 @@
+<div class="container vh-100">
+    <div class="justify-content-center h-100">
+        <h1>{{message}}</h1>
+        <div class="card my-auto shadow text-center ">
+            <div class="card-body px-5">
+                
+                <div class="text-center">
+                    <h2>Welcome To Postbook </h2>
+                </div>
+                <div class="text-center" style="color: grey;">
+                    Enter your login Details.
+                </div>
+                    <form class="text-center" [formGroup]="signupForm" (ngSubmit)="submit()">
+                    <div class="form-group">
+                        <input type="text" id="fname" placeholder="First Name" class="form-control" formControlName="fname"
+                            name="fname" />
+                            <span *ngIf = "signupForm.controls['fname'].invalid && signupForm.controls['fname'].touched  &&signupForm.hasError('required','fname')" >First name is required</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lname" placeholder="Last Name" class="form-control" formControlName="lname"
+                            name="lname" />
+                            <span *ngIf = "signupForm.controls['lname'].invalid && signupForm.controls['lname'].touched  &&signupForm.hasError('required','lname')">Last name is required</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="email" placeholder="Email Address" class="form-control" formControlName="email"
+                            name="email" />
+                            <span *ngIf = "signupForm.controls['email'].invalid && signupForm.controls['email'].touched  &&signupForm.hasError('required','email')" >Email is required</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="user" placeholder="Username" class="form-control" formControlName="user"
+                            name="user" />
+                            <span *ngIf = "signupForm.controls['user'].invalid && signupForm.controls['user'].touched  &&signupForm.hasError('required','user')">Username is required</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" class="form-control"
+                            formControlName="password" name="password" />
+                            <span *ngIf = "signupForm.controls['password'].invalid && signupForm.controls['password'].touched  &&signupForm.hasError('required','password')">Password is required.</span>
+                            <span *ngIf = "signupForm.hasError('pattern','password')">Password should be minimum 6 characters and contain a number, alphabet and a special character.</span>           
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="cpassword" placeholder="Confirm Password" class="form-control"
+                            formControlName="cpassword" name="cpassword" />
+                            <span *ngIf = "signupForm.controls['password'].value !== signupForm.controls['cpassword'].value">Passwords do not match.</span>
+                            <span *ngIf = "signupForm.hasError('pattern','cpassword')">Password should be minimum 6 characters and contain a number, alphabet and a special character.</span>
+                    </div>
+                    <button [disabled] = "signupForm.invalid" class="btn btn-primary">Sign Up</button>
+                </form>
+                <a routerLink = "/login">Already registerd! CLick Here To Login</a>
+            </div>
+        </div>
+    </div>
+</div>

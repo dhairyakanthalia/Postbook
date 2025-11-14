@@ -1,0 +1,26 @@
+<div class="text-center" style="width: fit-content;">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Create Post</mat-card-title>
+        </mat-card-header>
+        <div>
+            <textarea #comment placeholder="Type Message..."></textarea>
+        </div>
+        <div *ngIf="filepath && filepath !== ''" id="post-preview">
+            <img [src]="filepath" id="post-preview-image" alt = "image not found"/>
+        </div>
+        <mat-card-actions align="end">
+            <button mat-button color="warn">
+                <label for="photo-upload">
+                    <input #photoSelector id="photo-upload" (change)="imagePreview(photoSelector)" type="file" accept="image/*"/>
+                    <mat-icon>insert_photo</mat-icon>
+                </label>
+            </button>
+            <button (click)="onPostClick(comment)" mat-raised-button color="primary">Post</button>
+        </mat-card-actions>
+        <div class="message">
+            {{message}}
+        </div>
+        
+    </mat-card>
+    </div>
